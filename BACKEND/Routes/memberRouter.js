@@ -3,7 +3,7 @@ const memberCtrl = require('../controllers/memberCtrl')
 const auth = require('../middleware/auth')
 const authAdmin = require('../middleware/authAdmin')
 
-//member routes
+//member route 
 router.route('/members')
     .get(memberCtrl.getMembers)
     .post(auth, authAdmin, memberCtrl.createMember)
